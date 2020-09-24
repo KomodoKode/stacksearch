@@ -58,7 +58,7 @@ def Search(
     def _remove_dot_com(string: str) -> str:
         string = str(string)
         # Maybe a regex is better here...
-        if string.endswith(".com") or string.endswith(".org"):
+        if string.endswith(".com") or string.endswith(".org") or string.endswith(".net") or string.endswith(".gov") :
             return string[0 : len(string) - 4]  # noqa
         else:
             return string
@@ -153,7 +153,7 @@ async def fSearch(
     async def _remove_dot_com(string: str) -> str:
         string = str(string)
         # Maybe a regex is better here...
-        if string.endswith(".com") or string.endswith(".org"):
+        if string.endswith(".com") or string.endswith(".org") or string.endswith(".net") or string.endswith(".gov"):
             return string[0 : len(string) - 4]  # noqa
         else:
             return string
